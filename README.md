@@ -40,77 +40,18 @@ scipy>=1.7.0
 ### Custom Module
 - `specfit`: Contains emission line fitting algorithms, continuum estimation, and visualization tools
 
-## Usage
-
-### Basic Analysis
-```bash
-python spectrum_analyzer.py --input data/spectra/example_spectrum_A.txt
-```
-
-### With Custom Configuration
-```bash
-python spectrum_analyzer.py --config config/my_analysis.json
-```
-
-### Python API
-```python
-from spectrum_analyzer import SpectrumAnalyzer
-
-# Load configuration
-config = {
-    "good_ranges": [[10130, 12830], [13300, 16710], [17510, 22260]],
-    "zoom_range": [[14000, 15000]],
-    "continuum_range": [[14000, 14100], [14500, 15000]],
-    "line_parameters": {
-        "line_1": "H_alpha",
-        "center_wave_1": 14182.74,
-        "line_2": "H_beta", 
-        "center_wave_2": 14320.02,
-        "n_iterations": 1000
-    }
-}
-
-# Analyze spectrum
-analyzer = SpectrumAnalyzer(config)
-analyzer.load_spectrum("data/spectra/example_spectrum_A.txt")
-analyzer.filter_spectrum()
-analyzer.run_analysis()
-```
-
 ## Methods
 
 ### Emission Line Fitting
 The analysis uses:
 - **Gaussian line profiles** for emission line modeling
 - **Linear continuum fitting** in user-defined regions
-- **Levenberg-Marquardt optimization** for parameter estimation
-- **Bootstrap resampling** for uncertainty quantification
+- **Bootstrap resampling** for uncertainty quantification and continuum optimization
 
 ### Key Features
 - Automatic doublet detection and simultaneous fitting
 - Flexible continuum region definition
 - Integrated flux measurements with error propagation
-- Quality control and outlier detection
-
-## Configuration
-
-Analysis parameters can be specified in JSON format:
-
-```json
-{
-    "normalization": 1e-19,
-    "good_ranges": [[10130, 12830], [13300, 16710], [17510, 22260]],
-    "zoom_range": [[14000, 15000]],
-    "continuum_range": [[14000, 14100], [14500, 15000]],
-    "line_parameters": {
-        "line_1": "emission_line_1",
-        "center_wave_1": 14182.74,
-        "line_2": "emission_line_2",
-        "center_wave_2": 14320.02,
-        "n_iterations": 1000
-    }
-}
-```
 
 ## Output
 
@@ -160,14 +101,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Citations
 
 If you use this tool in your research, please cite:
-```
-@software{spectral_line_fitting,
-  author = {Your Name},
-  title = {Spectral Line Fitting Tool},
-  url = {https://github.com/yourusername/spectral-line-fitting},
-  year = {2025}
-}
-```
+
 
 ## Contact
 For questions about the code or methodology, please contact [your.email@institution.edu].
