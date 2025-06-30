@@ -15,32 +15,17 @@ The implementation includes support for:
 The tool expects spectral data in ASCII format with the following structure:
 - **Column 1**: Wavelength (Angstroms)
 - **Column 2**: Flux density (arbitrary units)
-- **Column 3**: Emission line wavelengths (NaN for continuum points)
-
-Example data format:
-```
-# Wavelength    Flux         EmissionLines
-10130.5        1.23e-19     NaN
-10131.0        1.25e-19     NaN
-14182.74       2.45e-19     14182.74
-```
+- **Column 3**: Detected emission line wavelengths
 
 ## Repository Structure
 
 ```
-├── spectrum_analyzer.py         # Main analysis script
-├── specfit/                     # Core spectral fitting module
-│   ├── __init__.py
-│   └── core.py                  # Fitting algorithms and utilities
-├── config/
-│   └── default_config.json     # Default analysis parameters
-├── data/
-│   └── spectra/                 # Example spectrum files
-│       └── example_spectrum_A.txt
-├── examples/
-│   └── analysis_example.py     # Usage examples
-├── requirements.txt             # Python dependencies
-└── README.md                   # This file
+├── spectra_fit_analysis.ipynb         # Example of analysis
+├── specfit.py                         # Core spectral fitting module
+├── spectra/                           # Example spectrum files
+│   └── example_spectrum_A.txt         # Two example spectra to play with
+│   └── example_spectrum_B.txt
+└── README.md                           # This file
 ```
 
 ## Requirements
@@ -50,11 +35,6 @@ Example data format:
 numpy>=1.20.0
 matplotlib>=3.3.0
 scipy>=1.7.0
-```
-
-Install dependencies:
-```bash
-pip install -r requirements.txt
 ```
 
 ### Custom Module
