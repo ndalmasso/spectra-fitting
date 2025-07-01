@@ -1,18 +1,17 @@
 # spectral-line-fitting
 
 ## Overview
-This repository contains a Python tool for fitting emission lines in astronomical spectra with automatic doublet detection and integrated flux calculations. The tool provides robust continuum fitting, line profile analysis, and comprehensive visualization capabilities for spectroscopic data analysis.
+This repository contains a Python tool for fitting emission lines in astronomical spectra with automatic doublet fitting and integrated flux calculations. The tool provides robust continuum fitting, line profile analysis, and comprehensive visualization capabilities for spectroscopic data analysis.
 
 The implementation includes support for:
 * Single and doublet emission line fitting
-* Automatic continuum determination
-* Bootstrap error estimation
+* Automatic continuum minimisation with MC estimation
 * Configurable analysis parameters
 * Publication-quality plotting
 
 ## Data Description
 
-The tool expects spectral data in ASCII format with the following structure:
+The tool expects spectral data in ".txt" format with the following structure:
 - **Column 1**: Wavelength (Angstroms)
 - **Column 2**: Flux density (arbitrary units)
 - **Column 3**: Detected emission line wavelengths
@@ -49,8 +48,8 @@ The analysis uses:
 - **Bootstrap resampling** for uncertainty quantification and continuum optimization
 
 ### Key Features
-- Automatic doublet detection and simultaneous fitting
-- Flexible continuum region definition
+- Automatic doublet simultaneous fitting
+- Flexible continuum region definition with MC minimisation
 - Integrated flux measurements with error propagation
 
 ## Output
@@ -60,7 +59,6 @@ The analysis produces:
 - **Fitted line parameters**: Central wavelength, FWHM, amplitude
 - **Integrated flux measurements**: Line flux and uncertainties
 - **Continuum characteristics**: Level and slope in fitting region
-- **Quality metrics**: Reduced χ², fitting residuals
 - **Visualization plots**:
   - Full spectrum overview with emission lines marked
   - Zoomed fitting region with continuum and line components
