@@ -5,7 +5,7 @@
 A Python tool for fitting emission lines in astronomical spectra with automatic doublet fitting and integrated flux calculations. Given source spectra and detected emission line wavelengths, the tool provides robust continuum fitting, line profile analysis, and comprehensive visualization capabilities for spectroscopic data analysis.
 
 ## "How to Fit a Spectra for Dummies"
-Here's a simple step-by-step guide to analyze your spectral data following the notebook "spectra_fit_analysis.ipynb":
+Here's a simple step-by-step guide to analyze your spectral data following the notebook "spectra_fit_analysis.ipynb".
 
 ### Step 1: Start with Your Data
 You need a spectrum file with emission lines already identified. Load your `.txt` file containing wavelengths, flux values, and the positions of detected emission lines.
