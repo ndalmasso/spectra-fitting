@@ -1,7 +1,7 @@
 # spectral-line-fitting
 
 ## Overview
-This repository contains a Python tool for fitting emission lines in astronomical spectra with automatic doublet fitting and integrated flux calculations. The tool provides robust continuum fitting, line profile analysis, and comprehensive visualization capabilities for spectroscopic data analysis.
+This repository contains a Python tool for fitting emission lines in astronomical spectra with automatic doublet fitting and integrated flux calculations. Having the the source spectra and the wavelength of the detected emission lines the he tool provides robust continuum fitting, line profile analysis, and comprehensive visualization capabilities for spectroscopic data analysis.
 
 The implementation includes support for:
 * Single and doublet emission line fitting
@@ -44,8 +44,7 @@ scipy>=1.7.0
 ### Emission Line Fitting
 The analysis uses:
 - **Gaussian line profiles** for emission line modeling
-- **Linear continuum fitting** in user-defined regions
-- **Bootstrap resampling** for uncertainty quantification and continuum optimization
+- **Linear continuum fitting** in user-defined regions with MC minimisation
 
 ### Key Features
 - Automatic doublet simultaneous fitting
@@ -64,44 +63,12 @@ The analysis produces:
   - Zoomed fitting region with continuum and line components
   - Residual plots and uncertainty estimates
 
-<p align="center">
-  <img src="https://via.placeholder.com/400x300?text=Full+Spectrum" alt="Full Spectrum" width="45%" />
-  <img src="https://via.placeholder.com/400x300?text=Line+Fitting" alt="Line Fitting Results" width="45%" />
-</p>
-
-## Error Handling
-
-The tool includes comprehensive error handling for:
-- Missing or corrupted data files
-- Invalid wavelength ranges
-- Convergence failures in fitting
-- Insufficient data points in analysis regions
-
-## Performance
-
-Typical analysis times:
-- Single line fitting: < 1 second
-- Doublet fitting: < 5 seconds
-- Bootstrap uncertainty estimation: 10-30 seconds (depending on iterations)
-
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Add tests for new functionality
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Citations
 
 If you use this tool in your research, please cite:
 
 
 ## Contact
-For questions about the code or methodology, please contact [your.email@institution.edu].
+For questions about the code or methodology, please contact [ndalmasso](nicolo.dalmasso1@gmail.com).
 
-**Note**: This tool is designed for astronomical spectroscopy applications. For other domains, parameter ranges and fitting models may need adjustment.
+**Note**: This is a demonstration example. For production analysis, ensure proper data validation, error handling, and parameter optimization for your specific dataset.
