@@ -8,7 +8,7 @@ A Python tool for fitting emission lines in astronomical spectra with automatic 
 Here's a simple step-by-step guide to analyze your spectral data following the notebook "spectra_fit_analysis.ipynb".
 
 ### Step 1: Start with Your Data
-You need a spectrum file with emission lines already identified. Load your `.txt` file containing wavelengths, flux values, and the positions of detected emission lines. (Two different spectra given in "")
+You need a spectrum file with emission lines already identified. Load your `.txt` file containing wavelengths, flux values, and the positions of detected emission lines. (Two different spectra given in "/spectra" to play with)
 ```python
 import numpy as np
 import specfit
