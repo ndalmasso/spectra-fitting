@@ -149,7 +149,7 @@ The tool generates:
 
 ## Citation
 
-If you use this tool in your research, please cite: [Citation details to be added]
+If you use this tool in your research, please cite: [PAPER]
 
 ## Contact
 
